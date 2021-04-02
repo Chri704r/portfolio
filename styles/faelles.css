@@ -1,0 +1,145 @@
+/*------STYLE AF NAV------*/
+
+nav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+nav a {
+    text-decoration: none;
+    color: black;
+    padding-bottom: 50px;
+    font-size: 1.5rem;
+    font-family: 'Open Sans', sans-serif;
+}
+nav a:hover {
+    color: #D67C61;
+}
+#menuknap {
+    margin-right: 20px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    padding-top: 10px;
+}
+#link_box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 100px;
+}
+#navbar {
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    position: fixed;
+}
+.bar1,
+.bar2,
+.bar3 {
+    width: 32px;
+    height: 4px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+    border-radius: 5px;
+}
+.change .bar1 {
+    transform: rotate(-45deg) translate(-8px, 5px);
+    transform: rotate(-45deg) translate(-8px, 5px);
+    background-color: #454545;
+}
+.change .bar2 {
+    opacity: 0;
+}
+.change .bar3 {
+    transform: rotate(45deg) translate(-8px, -7px);
+    transform: rotate(45deg) translate(-8px, -7px);
+    background-color: #454545;
+}
+@media only screen and (min-width: 800px) {
+    #menuknap {
+        display: none;
+    }
+    #navbar {
+        display: contents;
+    }
+    #link_box {
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        grid-gap: 30px;
+        margin-right: 50px;
+    }
+    nav {
+        position: fixed;
+        z-index: 3;
+    }
+    nav a {
+        color: #5c5c5c;
+        padding-bottom: 15px;
+        font-size: 1.2rem;
+    }
+}
+
+/*-----effekter-------*/
+
+.hidden {
+    display: none;
+}
+
+/*------animationer-------*/
+
+.openmenu {
+    animation-name: slide_kf;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+@keyframes slide_kf {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+.closemenu {
+    animation-name: slideout_kf;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+@keyframes slideout_kf {
+    100% {
+        transform: translateX(100%);
+    }
+    0% {
+        transform: translateX(0%);
+    }
+}
+
+/*---------STYLE AF FOOTER-----------*/
+
+footer {
+    background-color: #D67C61;
+    text-align: center;
+    color: #525252;
+    margin-top: 100px;
+}
+footer p {
+    margin-top: 5px;
+    font-family: 'Open Sans', sans-serif;
+}
+#footer_tekst {
+    padding-top: 90px;
+    padding-bottom: 20px;
+}
+#navn {
+    font-weight: 600;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/faelles.css">
+    <!--    <link rel="stylesheet" href="styles/">-->
+    <title>Portfolio</title>
+</head>
+
+<body>
+
+    <style>
+        button {
+            margin-top: 200px;
+        }
+
+    </style>
+
+
+    <header>
+        <nav>
+            <div id="menuknap">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <div id="navbar" class="hidden">
+                <div id="link_box">
+                    <a class="link" href="index.html">Forside</a>
+                    <a class="link" href="index.html#portfolio">Portfolio</a>
+                    <a class="link" href="index.html#om">Om mig</a>
+                    <a class="link" href="index.html#kontakt">Kontakt</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <p class="navn"></p>
+            <img class="billede" src="" alt="">
+            <button>Tilbage</button>
+        </article>
+    </main>
+
+    <footer>
+        <div id="footer_tekst">
+            <p id="navn">Christine Piilmann</p>
+            <p>©Copyright. All rights reserved, 2021</p>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+<script>
+    //---------SCRIPT BEGYNDER----------
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get("id");
+    let billede;
+    const fil = "portfolio.json";
+
+    console.log("ID", id);
+
+    document.addEventListener("DOMContentLoaded", loadJSON);
+
+    async function loadJSON(fil) {
+        console.log("DOMErLoaded");
+        const resultat = await fetch("portfolio.json");
+        const json = await resultat.json();
+        visProjekt(json);
+    }
+
+    function visProjekt(billede) {
+
+        console.log("inde");
+        document.querySelector(".billede").src = `${billede.billede}`;
+        document.querySelector(".navn").textContent = `${billede.navn}`;
+
+        //document.querySelector("button").addEventListener("click", tilbageTilForside);
+    }
+
+    document.querySelector("button").addEventListener("click", tilbageTilForside);
+
+    function tilbageTilForside() {
+        history.back();
+    }
+
+</script>
+
+</html>

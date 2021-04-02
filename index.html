@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/faelles.css">
+    <title>Portfolio</title>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div id="menuknap">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <div id="navbar" class="hidden">
+                <div id="link_box">
+                    <a class="link" href="index.html#splash">Forside</a>
+                    <a class="link" href="index.html#portfolio">Portfolio</a>
+                    <a class="link" href="index.html#om">Om mig</a>
+                    <a class="link" href="index.html#kontakt">Kontakt</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="splash">
+
+            <div id="socialemedier">
+                <a href="https://www.facebook.com/christine.piilmann/"><img class="medie" src="img/facebook.png" alt="facebook ikon"></a>
+                <a href="https://www.instagram.com/christinepiilmann/"><img class="medie" src="img/instagram.png" alt="instagram ikon"></a>
+                <a href="https://www.pinterest.dk/Christinepiilmann/_saved/"><img class="medie" src="img/pinterest.png" alt="pinterest ikon"></a>
+            </div>
+
+            <h1>Multimediedesigner.</h1>
+            <p id="beskrivelse">Studerende multimediedesigner, med passion for moderne og nytænkende webløsninger og grafisk design. </p>
+            <p class="signatur">-Christine Piilmann</p>
+        </section>
+
+        <section id="portfolio">
+            <div id="filter">
+                <!--Filtreringsknapper med data-attributter--->
+                <button data-kategori="alle" class="valgt">Alle</button>
+                <button data-kategori="website">Websites</button>
+                <button data-kategori="grafik">Grafisk design</button>
+                <button data-kategori="video">Videoer</button>
+                <button data-kategori="">Logoer</button>
+            </div>
+
+            <div id="liste"></div>
+        </section>
+
+        <section id="om">
+            <div id="mig">
+                <div>
+                    <img src="img/selvportraet.png" alt="billede af mig">
+                </div>
+                <div id="omtekst">
+                    <h2>Lidt om mig</h2>
+                    <p>Jeg hedder Christine Piilmann, er 21 år og går på mit 2. semester af multimediedesignuddannelsen på Københavns erhvervsakademi/KEA. Jeg elsker at være kreativ og skabe moderne digitale løsninger. Jeg er struktureret og detaljeorienteret, som afspejler sig i mine projekter, som altid er velovervejet. Derudover er jeg nysgerrig på at lære og ser gode muligheder i ny erfaring.</p>
+                    <p id="mere">Læs mere</p>
+                </div>
+            </div>
+            <div id="kompetence">
+                <div>
+                    <div class="sidepic">
+                        <img src="img/kompetence_ikon-02.png" alt=" grafisk design ikon">
+                        <h3>Grafisk design</h3>
+                    </div>
+                    <p>Ved brug af Illustrator laver jeg grafisk design til brug på hjemmesider i form af illustrationer eller motion-graphics, samt grafik til SoMe. Grafikken er med til at danne det visuelle udtryk, samt tilføre elementer som kan forbedre forståelsen og brugeroplevelsen.</p>
+                </div>
+                <div>
+                    <div class="sidepic">
+                        <img src="img/kompetence_ikon-01.png" alt="web design ikon">
+                        <h3>Webdesign</h3>
+                    </div>
+                    <p>Med erfaring i HTML, CSS, Javascript samt CMS, såsom Wordpress, begår jeg mig at udvikle websites med udgangspunkt i de nyeste trends, som altid er responsivt, så de kan benyttes på alle platforme. Jeg begår mig også i at lave Lo-fi prototyper samt Hi-fi prototyper. </p>
+                </div>
+                <div>
+                    <div class="sidepic">
+                        <img src="img/kompetence_ikon-03.png" alt="digital kommunikation ikon">
+                        <h3>Digital kommunikation</h3>
+                    </div>
+                    <p>Mine webløsninger bygger altid på UI og UX for, designe den bedste brugergrænseflade samt give den bedst mulige brugeroplevelse. Med viden og forståelse for SoMe designer og udvikler jeg digitalt indhold som rammer den ønskede målgruppe. </p>
+                </div>
+                <div>
+                    <div class="sidepic">
+                        <img src="img/kompetence_ikon-04.png" alt="videoproduktion ikon">
+                        <h3>Videoproduktion</h3>
+                    </div>
+                    <p>Jeg bestræber mig på at mine videoproduktioner har en en god storytelling, samt en høj production value. Ved brug af Premiere Pro eller Final Cut Pro klippes videoerne med et tempo som er fængende og sammenhængende. </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="kontakt">
+            <div id="column_right">
+                <h4>Lad os snakke sammen.</h4>
+                <p class="p">Finder du mine projekter interessante eller kunne du tænker dig at vide mere?
+                    <br>Så er du velkommen til at kontakte mig, ved at udfylde formularen eller ringe på nummeret nedenfor, så vil jeg forsøge at vende tilbage hurtigst muligt. </p>
+                <p class="p">Jeg ser frem til at høre fra dig!</p>
+                <p class="p">Telefon: +45 60 63 56 60</p>
+                <p class="signatur">-Christine Piimann</p>
+            </div>
+            <div id="column_left">
+                <div>
+                    <img src="img/mail.png" alt="mail ikon">
+                    <p id="besked_overskrift">Skriv en besked til mig</p>
+                </div>
+                <form action="" netlify>
+                    <div>
+                        <label for="navn">
+                            <p>Dit fornavn og efternavn:</p>
+                            <input type="text" placeholder="Hvad er dit navn?" required>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="mail">
+                            <p>Din mailadresse:</p>
+                            <input type="text" placeholder="Hvad er din mailadresse?" required>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="telefon">
+                            <p>Dit telefonnummer:</p>
+                            <input type="text" placeholder="fx. +45 12 34 56 78" required>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="emne">
+                            <p>Emne:</p>
+                            <input type="text" placeholder="Hvad drejer beskeden sig om?" required>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="besked">
+                            <p>Besked:</p>
+                            <textarea name="besked" cols="30" rows="6" placeholder="Skriv din besked til mig her" required></textarea>
+                        </label>
+                    </div>
+
+                    <button type="submit">Send</button>
+                </form>
+
+            </div>
+        </section>
+
+        <template>
+            <article>
+                <div id="billede_container">
+                    <img class="billede" src="" alt="">
+                    <div class="overlay">
+                        <p class="navn"></p>
+                    </div>
+                </div>
+            </article>
+        </template>
+
+    </main>
+
+    <footer>
+        <div id="footer_tekst">
+            <p id="navn">Christine Piilmann</p>
+            <p>©Copyright. All rights reserved, 2021</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="forside.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+</body>
+
+</html>
