@@ -119,35 +119,35 @@
                     <img src="img/mail.png" alt="mail ikon">
                     <p id="besked_overskrift">Skriv en besked til mig</p>
                 </div>
-                <form name="besked" method=“post” action="tak.html" data-netlify="true">
+                <form name="besked" action="POST" data-netlify="true">
                     <div>
                         <label for="navn">
                             <p>Dit fornavn og efternavn:</p>
-                            <input type="text" placeholder="Hvad er dit navn?" required>
+                            <input type="text" placeholder="Hvad er dit navn?" name="name" required>
                         </label>
                     </div>
                     <div>
                         <label for="mail">
                             <p>Din mailadresse:</p>
-                            <input type="text" placeholder="Hvad er din mailadresse?" required>
+                            <input type="text" placeholder="Hvad er din mailadresse?" name="email" required>
                         </label>
                     </div>
                     <div>
                         <label for="telefon">
                             <p>Dit telefonnummer:</p>
-                            <input type="text" placeholder="fx. +45 12 34 56 78" required>
+                            <input type="text" placeholder="fx. +45 12 34 56 78" name="phone" required>
                         </label>
                     </div>
                     <div>
                         <label for="emne">
                             <p>Emne:</p>
-                            <input type="text" placeholder="Hvad drejer beskeden sig om?" required>
+                            <input type="text" placeholder="Hvad drejer beskeden sig om?" name="subject" required>
                         </label>
                     </div>
                     <div>
                         <label for="besked">
                             <p>Besked:</p>
-                            <textarea name="besked" cols="30" rows="6" placeholder="Skriv din besked til mig her" required></textarea>
+                            <textarea name="message" cols="30" rows="6" placeholder="Skriv din besked til mig her" required></textarea>
                         </label>
                     </div>
 
