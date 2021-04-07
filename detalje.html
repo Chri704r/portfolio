@@ -16,8 +16,88 @@
 <body>
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1em;
+            margin: 15px 0px 0px 10px;
+        }
+
+        p {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 27px;
+            font-size: 1em;
+            margin: 5px 10px 20px 10px;
+        }
+
+        .navn {
+            margin-top: 70px;
+            text-align: center;
+            font-size: 1.5em;
+            font-family: 'Open Sans', sans-serif;
+            color: #D67C61;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        img {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
         button {
-            margin-top: 200px;
+            display: table;
+            margin: 40px auto 30px;
+            background-color: #D67C61;
+            width: 130px;
+            height: 40px;
+            border: none;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.9em;
+        }
+
+        button:hover {
+            background-color: #ba674e;
+        }
+
+        video {
+            width: 100%;
+        }
+
+        .link2 {
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1em;
+            color: #D67C61;
+            font-family: 'Open Sans', sans-serif;
+            margin-left: 10px;
+        }
+
+        .link2:hover {
+            color: #a2553e;
+        }
+
+        @media only screen and (min-width: 700px) {
+            .navn {
+                margin-top: 90px;
+                font-size: 1.8em;
+            }
+            #container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 15px;
+                margin: 50px 20px 0 20px;
+            }
+            #second {
+                max-width: 500px;
+            }
         }
 
     </style>
@@ -44,8 +124,24 @@
     <main>
         <article>
             <p class="navn"></p>
-            <img class="billede" src="" alt="">
-            <button>Tilbage</button>
+            <div id="container">
+                <div>
+                    <img class="billede" src="" alt="">
+                    <img class="billede2" src="" alt="">
+                    <img class="billede3" src="" alt="">
+                    <img class="billede4" src="" alt="">
+                    <img class="billede5" src="" alt="">
+                    <video src="" class="video" id="video" type="video/mp4" controls autoplay muted loop></video>
+                </div>
+                <div id="second">
+                    <h2>Opgavebeskrivelse:</h2>
+                    <p class="opgave"> </p>
+                    <h2>Fremgangsmåde: </h2>
+                    <p class="fremgang"></p>
+                    <a class="link2" id="link2" href="">Gå til fulde website her ➜</a>
+                    <button>Tilbage</button>
+                </div>
+            </div>
         </article>
     </main>
 
@@ -68,24 +164,52 @@
     let billede;
     const fil = "portfolio.json";
 
-    console.log("ID", id);
 
-    document.addEventListener("DOMContentLoaded", loadJSON);
+    console.log("ID:", id);
+
+    document.addEventListener("DOMContentLoaded", start);
+
+    function start() {
+        loadJSON(fil);
+    }
 
     async function loadJSON(fil) {
         console.log("DOMErLoaded");
-        const resultat = await fetch("portfolio.json");
+        const resultat = await fetch(fil);
         const json = await resultat.json();
-        visProjekt(json);
+
+        const json_filtered = json.filter(billede => billede._id == id);
+
+        console.log(json_filtered[0]);
+        visProjekt(json_filtered[0]);
     }
+
+
 
     function visProjekt(billede) {
 
-        console.log("inde");
-        document.querySelector(".billede").src = `${billede.billede}`;
-        document.querySelector(".navn").textContent = `${billede.navn}`;
+        if (`${billede.video}` == "") {
+            document.getElementById("video").remove();
+        } else {
+            document.querySelector(".video").src = `${billede.video}`;
+        }
 
-        //document.querySelector("button").addEventListener("click", tilbageTilForside);
+        if (`${billede.link}` == "") {
+            document.getElementById("link2").remove();
+        } else {
+            document.querySelector(".link2").href = `${billede.link}`;
+        }
+
+        document.querySelector(".navn").textContent = `${billede.navn}`;
+        document.querySelector(".billede").src = `${billede.billede}`;
+        document.querySelector(".billede2").src = `${billede.billede2}`;
+        document.querySelector(".billede3").src = `${billede.billede3}`;
+        document.querySelector(".billede4").src = `${billede.billede4}`;
+        document.querySelector(".billede5").src = `${billede.billede5}`;
+        document.querySelector(".opgave").textContent += `${billede.opgavebeskrivelse}`;
+        document.querySelector(".fremgang").textContent += `${billede.fremgang}`;
+
+
     }
 
     document.querySelector("button").addEventListener("click", tilbageTilForside);

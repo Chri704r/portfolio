@@ -20,12 +20,12 @@
         //-----------filtrer retter------------
         function filtrerRetter() {
             filter = this.dataset.kategori;
-            //console.log(this);
+            console.log(filter);
 
             document.querySelector(".valgt").classList.remove("valgt");
             this.classList.add("valgt");
 
-            visBilleder();
+            hentData(fil);
         }
 
         //----------hent data fra json----------
@@ -37,6 +37,8 @@
 
         //-----kloner billeder/data til template----
         function visBilleder(billeder) {
+
+            listevisning.textContent = "";
 
             billeder.forEach(billede => {
 
