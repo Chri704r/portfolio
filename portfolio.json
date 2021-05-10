@@ -74,6 +74,7 @@
         "navn": "radio LOUD",
         "billede": "img/loud.jpg",
         "billede2": "img/styletile_loud.jpg",
+        "video": "",
         "kategori": "website",
         "opgavebeskrivelse": "Denne opgave er udarbejdet i samarbejde med radio LOUD, hvor vi havde til opgave at redesigne deres website med udgangspunkt i wordpress, hvor løsningen er dynamisk og benytter sig af wordpress rest API",
         "fremgang": "Til denne opgave startede vi med at analysere virksomhedens daværende hjemmeside, og komme frem til hvilke fejl og mangler som kunne rettes. Dette vidreførte til research af andre løsninger og målgruppen. Med denne baggrundsviden tog vi udgangspunkt i andre streamingtjenester som målgruppen benytter sig af og videreføre disse konventioner i vores løsning. Dermed blev der lagt fokus på at gøre siden genkendelig og repræsenterende for LOUD, samt gøre siden brugervenlig.",
