@@ -68,5 +68,16 @@
         "opgavebeskrivelse": "Denne opgave er udarbejdet i grupper sammen med en valgfri virksomhed. Opgaven bestod af at lave indhold til en virksomhed og i den forbindelse redesigne virksomhedens hjemmeside.",
         "fremgang": "Til denne opgave startede vi med at analysere virksomhedens daværende hjemmeside, samt lave reasearch for at finde frem til hvad og hvordan vi ville redesigne og forbedre hjemmesiden. Vi tog derefter ud til virksomheden hvor vi brugte tid på interviews, observationer, at tage billeder og filme til vores eget interview, brugt i redesignet. Derefter gik produktionen igang med prototyper, film-redigering og kode.",
         "link": "https://piilmanndesigns.dk/kea/05_content/aurelia/forside.html"
+  },
+    {
+        "_id": "7",
+        "navn": "radio LOUD",
+        "billede": "img/loud.jpg",
+        "billede2": "img/aurelia_wireframe.png",
+        "billede3": "img/aurelia_skitse.jpeg",
+        "video": "img/aurelia_video.mp4",
+        "kategori": "website",
+        "opgavebeskrivelse": "Denne opgave er udarbejdet i samarbejde med radio LOUD, hvor vi havde til opgave at redesigne deres website med udgangspunkt i wordpress, hvor løsningen er dynamisk og benytter sig af wordpress rest API",
+        "fremgang": "Til denne opgave startede vi med at analysere virksomhedens daværende hjemmeside, og komme frem til hvilke fejl og mangler som kunne rettes. Dette vidreførte til research af andre løsninger og målgruppen. Med denne baggrundsviden tog vi udgangspunkt i andre streamingtjenester som målgruppen benytter sig af og videreføre disse konventioner i vores løsning. Dermed blev der lagt fokus på at gøre siden genkendelig og repræsenterende for LOUD, samt gøre siden brugervenlig."
   }
 ]
